@@ -1,0 +1,9 @@
+N°    Question métier    Indicateur
+1    Quel est le taux global d’annulation ?    Taux d’annulation (%)
+2    Quel établissement annule le plus ?    Taux par hôtel
+3    Quels mois d’arrivée présentent le plus d’annulations ?    Taux mensuel
+4    Le délai de réservation influence-t-il les annulations ?    Taux par tranche de lead_time
+5    Quels segments de marché annulent le plus ?    Taux par market_segment
+6    Comment évolue le taux d’annulation dans chaque établissement ?    Évolution mensuelle du taux par hôtel (CTE + LAG)
+7    Le type d’acompte réduit-il vraiment les annulations ?    Taux par deposit_type
+8    Quels pays réservent le plus, et annulent-ils plus que les autres ?    Top 10 des pays et leur taux (RANK)
