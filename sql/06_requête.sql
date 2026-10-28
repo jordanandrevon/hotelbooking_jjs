@@ -3,15 +3,6 @@
 -- Comment evolue le taux d'annulation chaque mois pour City Hotel et Resort Hotel ?
 -- Dialecte : GoogleSQL (BigQuery Standard SQL)
 -- Source : export BigQuery de 52 lignes, juillet 2015 - aout 2017
--- ============================================================================
--- AVANT EXECUTION : remplacer `VOTRE_PROJET.VOTRE_DATASET.VOTRE_TABLE`
--- par l'identifiant reel de la table BigQuery utilisee dans les requetes 03-05.
--- Colonnes source supposees : hotel, arrival_date_year,
--- arrival_date_month, is_canceled (0 ou 1).
--- Executer chaque SELECT separement dans BigQuery pour visualiser son resultat.
--- Les chiffres commentes proviennent de l'export CSV partage ; ils ne sont pas
--- des resultats verifies sur une nouvelle execution de la table source.
--- ============================================================================
 
 -- 01. TAUX D'ANNULATION PAR MOIS ET PAR HOTEL
 -- COUNT(*) : toutes les reservations ; COUNTIF : uniquement les annulees.
@@ -182,9 +173,6 @@ SELECT
   COUNT(DISTINCT FORMAT('%s-%d-%s', hotel, arrival_date_year, arrival_date_month))
     AS groupes_hotel_mois
 FROM `hotel-booking-jjs.hotel_booking.reservations`;
--- Attendu sur le perimetre exporte : 119208 lignes et 52 groupes hotel-mois.
--- Dataset initial du projet : 119390 lignes ; difference = 182.
--- Documenter les exclusions / transformations avant de conclure.
 
 -- ============================================================================
 -- ANALYSE METIER : INTERPRETATION DES RESULTATS EXPORTES

@@ -6,12 +6,6 @@
 -- MOTEUR       : Google BigQuery (GoogleSQL)
 -- TABLE SOURCE : `hotel-booking-jjs.hotel_booking.reservations`
 -- PERIMETRE    : 119 208 reservations, selon les controles executes.
---
--- MODE D'EMPLOI : Executer les requetes SEPAREMENT dans BigQuery.
--- Les commentaires -- ne sont pas executes.
--- Attention : country represente un code pays associe a la reservation,
--- et ne prouve pas la nationalite du client.
--- ============================================================================
 
 -- ============================================================================
 -- REQUETE 1 - CONTROLE QUALITE DE COUNTRY
@@ -88,7 +82,7 @@ WHERE rang <= 10
 ORDER BY rang, country;
 
 -- ============================================================================
--- RESULTATS OBSERVES - REQUETE 3 (export BigQuery)
+-- RESULTATS OBSERVES - REQUETE 3 
 -- ============================================================================
 -- Rang  Code  Reservations  Annulations  Taux (%)
 --   1   PRT       48 482       27 505      56.73
@@ -154,7 +148,7 @@ WHERE c.rang <= 10
 ORDER BY c.rang, s.hotel;
 
 -- ============================================================================
--- RESULTATS OBSERVES - REQUETE 4 (CSV exporte, 20 lignes)
+-- RESULTATS OBSERVES - REQUETE 4 
 -- ============================================================================
 -- Pays    City: reservations / taux    Resort: reservations / taux
 -- PRT       30 860 / 65.03 %             17 622 / 42.21 %
@@ -210,15 +204,6 @@ SELECT
         AS taux_annulation_top10_pct
 FROM reservations_top10
 ORDER BY hotel;
-
--- RESULTATS ATTENDUS A VERIFIER DANS BIGQUERY :
--- City Hotel  : 65 429 reservations ; 28 876 annulations ; 44.13 %.
--- Resort Hotel: 35 220 reservations ; 10 265 annulations ; 29.15 %.
--- TOTAL TOP 10: 100 649 reservations ; 39 141 annulations ; 38.89 %.
--- Part du Top 10 : 100 649 / 119 208 * 100 = 84.43 %.
--- Les autres pays representent 15.57 % des reservations.
--- Le perimetre source de 119 208 lignes doit etre documente par rapport
--- aux 119 390 lignes du jeu de donnees initial (difference : 182 lignes).
 
 -- ============================================================================
 -- CONCLUSION METIER - QUESTION N°8

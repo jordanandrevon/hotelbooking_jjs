@@ -53,13 +53,11 @@ ORDER BY taux_annulation_pct DESC;
 -- INTERPRETATION METIER
 -- =====================================================
 
--- Le City Hotel présente un taux d'annulation
--- de 41.79 %, contre 27.77 % pour le Resort Hotel.
+-- Le City Hotel présente un taux d'annulation de 41.79 %, contre 27.77 % pour le Resort Hotel.
 
 -- L'écart est de 14.02 points de pourcentage.
 
--- Le City Hotel concentre environ 75 %
--- des annulations du groupe hôtelier.
+-- Le City Hotel concentre environ 75 % des annulations du groupe hôtelier.
 
 -- =====================================================
 -- RECOMMANDATION METIER
@@ -67,9 +65,7 @@ ORDER BY taux_annulation_pct DESC;
 
 -- Prioriser l'analyse des réservations du City Hotel.
 
--- Étudier les segments de marché, les délais de
--- réservation et les politiques d'acompte afin
--- d'identifier les facteurs associés aux annulations.
+-- Étudier les segments de marché, les délais de réservation et les politiques d'acompte afin d'identifier les facteurs associés aux annulations.
 
 -- =====================================================
 -- LIMITES

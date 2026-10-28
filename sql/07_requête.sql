@@ -125,10 +125,7 @@ ORDER BY hotel, market_segment, deposit_type;
 -- ==========================================================================
 -- CONTROLES DE COHERENCE (requete complementaire facultative)
 -- ==========================================================================
--- A executer separement : confirme le perimetre et les valeurs de is_canceled.
--- Attendu d'apres les requetes : 119208 lignes ; 44198 annulees ;
--- 75010 non annulees ; 0 statut invalide ou NULL.
--- Si un resultat differe, verifier le chargement et les filtres de la table.
+
 SELECT
   COUNT(*) AS total_reservations,
   COUNTIF(is_canceled = 1) AS reservations_annulees,

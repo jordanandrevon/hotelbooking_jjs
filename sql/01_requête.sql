@@ -9,8 +9,7 @@
 -- Quel est le taux global d'annulation ?
 
 -- OBJECTIF :
--- Mesurer la proportion de réservations annulées
--- sur l'ensemble des réservations analysées.
+-- Mesurer la proportion de réservations annulées sur l'ensemble des réservations analysées.
 
 SELECT
     COUNT(*) AS total_reservations,
@@ -45,16 +44,11 @@ FROM `hotel-booking-jjs.hotel_booking.reservations`;
 
 -- Environ 37 réservations sur 100 sont donc annulées.
 
--- Ce niveau d'annulation peut compliquer
--- la gestion des disponibilités, la planification
--- des équipes et les prévisions de revenus.
+-- Ce niveau d'annulation peut compliquer la gestion des disponibilités, la planification des équipes et les prévisions de revenus.
 
 -- RECOMMANDATION :
--- Identifier les segments de réservations présentant
--- les taux d'annulation les plus élevés afin de
--- mieux cibler les actions de prévention.
+-- Identifier les segments de réservations présentant les taux d'annulation les plus élevés afin de  mieux cibler les actions de prévention.
 
 -- LIMITE :
--- Ce taux global ne permet pas d'identifier
--- les facteurs associés aux annulations.
+-- Ce taux global ne permet pas d'identifier les facteurs associés aux annulations.
 -- Des analyses complémentaires sont nécessaires.
